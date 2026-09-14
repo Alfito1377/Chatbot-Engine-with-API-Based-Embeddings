@@ -1,4 +1,5 @@
 Markdown
+# JIKA PAKAI EMBEDDING FILE PAKAI API REPO INI,JIKA PAKAI PC KSI PAKE YANG REPO "ENGINEGROQ"
 # Panduan Deployment - AI Service DDM PT Sage
 
 Dokumen ini berisi catatan langkah-langkah teknis untuk melakukan *deploy* mesin AI (FastAPI & LangChain) ke server VPS berbasis Ubuntu.
