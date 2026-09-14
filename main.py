@@ -13,9 +13,11 @@ class DocumentPayload(BaseModel):
 @app.post("/chat")
 async def chat_endpoint(data: dict):
     pertanyaan = data.get("pertanyaan", "")
+    session_id = data.get("session_id", "sesi_default") 
+    
     try:
-        jawaban_ai = tanya_agen(pertanyaan)
-        return {"jawaban": jawaban_ai, "sumber": "Sistem Hybrid (SQL & Dokumen)"}
+        jawaban_ai = tanya_agen(pertanyaan, thread_id=session_id) 
+        return {"jawaban": jawaban_ai, "sumber": "Sistem AI PT Sage"}
     except Exception as e:
         return {"jawaban": f"Error di mesin AI: {str(e)}", "sumber": "Error"}
 

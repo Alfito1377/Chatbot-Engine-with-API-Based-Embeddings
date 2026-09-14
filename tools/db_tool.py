@@ -17,7 +17,7 @@ tabel_penting = [
 db = SQLDatabase.from_uri(
     url_database,
     include_tables=tabel_penting,
-    sample_rows_in_table_info=3  # Ubah dari 0 menjadi 3 (LLM butuh melihat contoh isi baris)
+    sample_rows_in_table_info=3  
 )
 
 llm_sql = ChatGroq(
@@ -26,7 +26,6 @@ llm_sql = ChatGroq(
     temperature=0 
 )
 
-# Di dalam file tools/db_tool.py
 
 instruksi_khusus = """Kamu adalah asisten AI ahli dalam menganalisis data logistik PT Sage.
 Tugasmu adalah membuat query SQL MySQL yang akurat untuk menjawab pertanyaan pengguna.
